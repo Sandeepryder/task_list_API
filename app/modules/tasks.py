@@ -68,7 +68,7 @@ class TeamManager :
             "entity_name": team_data.entity_name,
             "task_type": team_data.task_type,
             "time": team_data.time,
-            "contact_id": team_data.contact_person,
+            "contact_person": team_data.contact_person,
             "note": team_data.note,
             "status": team_data.status
         }

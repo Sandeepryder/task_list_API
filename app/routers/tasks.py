@@ -36,17 +36,6 @@ def get_team_details(team_id: str):
     
 
 
-# @router.put("/team/{team_id}")
-# def update_team_details(team_id: str, new_data: createTeam):
-#     try :
-#         result = team_mgr.update_team(team_id, new_data.dict())
-#         # return result
-#         return {"message": result["message"], "user": result.get("user")}
-    
-#     except Exception as e:
-#         return {"status": "error", "message": str(e)}
-    
-
 @router.put("/edit-team")
 def edit_team(payload: TeamEdit):
     try:
