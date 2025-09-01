@@ -64,11 +64,11 @@ class TeamManager :
 
         teams[team_id] = {
             "id": team_id, 
-            "date": str(team_data.date),
+            "date": team_data.date,
             "entity_name": team_data.entity_name,
             "task_type": team_data.task_type,
-            "time": str(team_data.time),
-            "contact_id": team_data.contact_person,
+            "time": team_data.time,
+            "contact_person": team_data.contact_person,
             "note": team_data.note,
             "status": team_data.status
         }
@@ -82,13 +82,24 @@ class TeamManager :
         """Returns all user details"""
         return self._read_team()
     
+    # def get_team_by_id(self, team_id: str) -> dict:
+    #     data = self._read_team()
+    #     print("data",)
+    #     for team in data.values():
+    #         if str(team["id"]) == str(team_id):
+    #             return {"message": "Team found", "user": team}
+    #     return {"message": f"Team with id {team_id} not found"}
+
     def get_team_by_id(self, team_id: str) -> dict:
-        data = self._read_team()
-        print("data",)
+        data = self._read_team() 
         for team in data.values():
-            if str(team["id"]) == str(team_id):
-                return {"message": "Team found", "user": team}
+            if str(team.get("id")) == str(team_id):
+
+                return team
+
+        # If not found
         return {"message": f"Team with id {team_id} not found"}
+
     
 
     def update_team1(self, team_id: str, new_data: dict) -> dict:

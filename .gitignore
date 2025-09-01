@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / compiled files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Database and data files
+*.sqlite3
+*.db
+*.csv
+*.json
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+*.ini
+*.pem
+*.key
+
+# Test results and coverage reports
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Build artifacts
+dist/
+build/
+
+# IDE-specific configurations (if not covered by .vscode or .idea)
+*.sublime-project
+*.sublime-workspace
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
