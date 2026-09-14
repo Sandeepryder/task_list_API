@@ -68,3 +68,9 @@ def delete_details(team_id :str):
         print("result", result)
     except Exception as e :
         return {"status": "error", "message": str(e)}
+
+
+
+@router.get("/reverse-string")
+def reverse_string(s:str) -> str:
+    return s[::-1]
