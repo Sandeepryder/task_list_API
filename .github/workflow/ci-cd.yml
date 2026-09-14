@@ -25,10 +25,10 @@ jobs:
         run: |
           pytest
 
- deploy:
-    needs: test
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+deploy:
+  needs: test
+  if: github.ref == 'refs/heads/main'
+  runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+  steps:
+    - uses: actions/checkout@v4
