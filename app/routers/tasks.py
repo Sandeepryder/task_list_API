@@ -78,3 +78,8 @@ def reverse_string(s:str) -> str:
 @router.get("/capitalize-string")
 def capitalize_string(s: str) -> str:
     return s.capitalize()
+
+@router.get("/backend-function")
+def backend_function():
+    # This function can be called from the frontend
+    return "This is a backend function that can be called from the frontend."
