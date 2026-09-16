@@ -74,3 +74,7 @@ def delete_details(team_id :str):
 @router.get("/reverse-string")
 def reverse_string(s:str) -> str:
     return s[::-1]
+
+@router.get("/capitalize-string")
+def capitalize_string(s: str) -> str:
+    return s.capitalize()
